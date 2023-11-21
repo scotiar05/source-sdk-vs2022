@@ -3855,7 +3855,7 @@ int CClientShadowMgr::BuildActiveShadowDepthList( const CViewSetup &viewSetup, i
 		// Bail if this flashlight doesn't want shadows
 		if ( !flashlightState.m_bEnableShadows )
 			continue;
-
+		/*
 		// Calculate an AABB around the shadow frustum
 		Vector vecAbsMins, vecAbsMaxs;
 		CalculateAABBFromProjectionMatrix( shadow.m_WorldToShadow, &vecAbsMins, &vecAbsMaxs );
@@ -3865,11 +3865,11 @@ int CClientShadowMgr::BuildActiveShadowDepthList( const CViewSetup &viewSetup, i
 
 		// FIXME: Could do other sorts of culling here, such as frustum-frustum test, distance etc.
 		// If it's not in the view frustum, move on
-		if ( R_CullBox( vecAbsMins, vecAbsMaxs, viewFrustum ) )
+		if (R_CullBox(vecAbsMins, vecAbsMaxs, viewFrustum))
 		{
-			shadowmgr->SetFlashlightDepthTexture( shadow.m_ShadowHandle, NULL, 0 );
+			shadowmgr->SetFlashlightDepthTexture(shadow.m_ShadowHandle, NULL, 0);
 			continue;
-		}
+		}*/
 
 		if ( nActiveDepthShadowCount >= nMaxDepthShadows )
 		{
