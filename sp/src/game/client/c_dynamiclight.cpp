@@ -25,7 +25,7 @@
 // which had a specific flag for use of elights.
 #define DLIGHT_NO_WORLD_USES_ELIGHT 1
 #endif
-
+#define DLIGHT_NO_WORLD_USES_ELIGHT 1
 
 //-----------------------------------------------------------------------------
 // A dynamic light, with the goofy hack needed for spotlights
